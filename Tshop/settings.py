@@ -25,7 +25,7 @@ SECRET_KEY = '!m0q2-^04&jv=mxczrt9(mlaix1kqmk-%^*8@^drwxnon5qo9i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://mytshirt-ecom.herokuapp.com/']
+ALLOWED_HOSTS = ['https://mytshirt-ecom.herokuapp.com','localhost','127.0.0.1']
 
 # Application definition
 
