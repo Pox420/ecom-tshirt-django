@@ -38,13 +38,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\django-projects\tshirt-shop\store\static\store\js" />
-      <recent name="F:\django-projects\tshirt-shop\store\templates\store" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\django-projects\tshirt-shop\store\views" />
       <recent name="F:\django-projects\tshirt-shop\store\templatetags" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\django-projects\tshirt-shop\store\static\store\js" />
+      <recent name="F:\django-projects\tshirt-shop\store\templates\store" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -160,7 +160,7 @@
       <workItem from="1610328063965" duration="12673000" />
       <workItem from="1610419151510" duration="1622000" />
       <workItem from="1610421432082" duration="6881000" />
-      <workItem from="1610513883127" duration="906000" />
+      <workItem from="1610513883127" duration="2112000" />
     </task>
     <servers />
   </component>
