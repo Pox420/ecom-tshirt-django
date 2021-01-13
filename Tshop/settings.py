@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!m0q2-^04&jv=mxczrt9(mlaix1kqmk-%^*8@^drwxnon5qo9i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://mytshirt-ecom.herokuapp.com/']
 
