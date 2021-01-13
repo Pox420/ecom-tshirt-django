@@ -1,0 +1,62 @@
+{% extends 'store/base.html' %}
+{% load tshirt_tags %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="p-4 m-4">
+                    <div class="w-75 text-center mx-auto">
+                        <img src="{{ tshirt.image.url }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col p-3 m-3">
+                <br>
+                <br>
+                <div class="">
+                    <div class="display-4">{{ tshirt.name }}</div>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam delectus dolorum et
+                        perferendis ratione ullam? Accusamus animi deserunt eaque eius eligendi eveniet exercitationem
+                        fugiat laborum magnam maxime modi neque sunt, totam? Accusamus, accusantium ad consequatur culpa
+                        dignissimos distinctio doloribus ducimus earum expedita id illum modi mollitia nostrum odit
+                        pariatur perspiciatis, quam reiciendis voluptatem? Ad, dicta dignissimos dolorem eaque eveniet
+                        in modi odit, officiis perferendis possimus quidem repellendus rerum, sint totam unde ut
+                        voluptatibus! Accusantium aliquid animi consequuntur corporis cupiditate deserunt esse et ex
+                        fuga harum ipsum itaque laudantium natus, numquam perferendis quisquam quo voluptates? Dolor
+                        earum itaque omnis tenetur.</p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="">Select Size</label>
+                        <div class="row">
+                            {% for size in tshirt.sizevariant_set.all %}
+                                <div class="col-4 mt-2">
+                                    <a href="/product/{{ tshirt.slug }}?size={{ size.size }}" class="btn border btn-block btn-{% get_active_size_button_class active_size size %}">
+                                        {{ size.size }}
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <br>
+                        <div class="display-5 badge badge-info">
+                            save {{ tshirt.discount }}%
+                        </div>
+                    </div>
+                    <div class="col border rounded mt-3">
+                        <div class="p-2">
+                            <div class="p-3 text-center">
+                                <span class="text-danger"><del>{{ price|rupees }}</del></span>
+                                &nbsp;
+                                <span class="font-weight-bold">{{ sell_price|rupees }}</span>
+                            </div>
+                            <a href="/addtocart/{{ tshirt.slug }}/{{ active_size.size }}?return_url={{ request.get_full_path }}" class="btn btn-outline-dark btn-block">Add To Cart</a>
+                            <a href="" class="btn btn-outline-dark btn-block">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
