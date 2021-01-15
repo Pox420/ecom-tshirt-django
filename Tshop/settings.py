@@ -11,11 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from django.contrib.sessions.backends import file
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -25,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!m0q2-^04&jv=mxczrt9(mlaix1kqmk-%^*8@^drwxnon5qo9i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://mytshirt-ecom.herokuapp.com', 'localhost', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['https://mytshirt-ecom.herokuapp.com','localhost','127.0.0.1']
 
 # Application definition
 
@@ -79,7 +76,7 @@ WSGI_APPLICATION = 'Tshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -100,17 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-if os.getcwd() == '/app':
-    import dj_database_url
-
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    ALLOWED_HOSTS = ['APP_NAME.herokuapp.com']
-    DEBUG = True
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(file)))
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -136,5 +122,5 @@ AUTH_TOKEN = 'test_1f464b71f44e8a749d23a337209'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
 # Activate Django-Heroku.
-django_heroku.settings(locals())

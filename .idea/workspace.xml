@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9506870-4819-4e81-93bb-02941279a970" name="Default Changelist" comment="" />
+    <list default="true" id="f9506870-4819-4e81-93bb-02941279a970" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tshop/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tshop/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +167,8 @@
       <workItem from="1610328063965" duration="12673000" />
       <workItem from="1610419151510" duration="1622000" />
       <workItem from="1610421432082" duration="6881000" />
-      <workItem from="1610513883127" duration="2516000" />
+      <workItem from="1610513883127" duration="3516000" />
+      <workItem from="1610713059896" duration="86000" />
     </task>
     <servers />
   </component>

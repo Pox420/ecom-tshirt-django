@@ -1,8 +1,8 @@
 from instamojo_wrapper import Instamojo
 
 
-API_KEY = 'test_e6f3ee14401e08c4f2605416b8b'
-AUTH_TOKEN = 'test_1f464b71f44e8a749d23a337209'
+API_KEY = 'test_e6f3ee14401e08c4f2605416b8'
+AUTH_TOKEN = 'test_1f464b71f44e8a749d23a33720'
 api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/');
 
 response = api.payment_request_create(
